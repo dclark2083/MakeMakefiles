@@ -25,20 +25,20 @@ CFLAGS = -c -g -Wall -Wextra
 
 all: $(TARGET)
 
-$(TARGET): main.o Employee.o Supervisor.o Officer.o
-	$(CC) $(CFlags) -o $(TARGET) main.o Employee.o Supervisor.o Officer.o
+employee: main.o Employee.o Supervisor.o Officer.o
+	$(CC) $(CFlags) -o $(TARGET) Employee.o Supervisor.o Officer.o main.o
 
 main.o: main.cpp Employee.h Supervisor.h Officer.h
-	$(CC) $(CFlags) main.cpp
+	$(CC) $(CFlags) -c main.cpp Employee.cpp Supervisor.cpp Officer.cpp
 
 Employee.o: Employee.cpp Employee.h
-	$(CC) $(CFlags) Employee.cpp
+	$(CC) $(CFlags) -c  Employee.cpp
 
 Officer.o: Officer.cpp Officer.h
-	$(CC) $(CFlags) Officer.cpp
+	$(CC) $(CFlags) -c  Officer.cpp
 
 Supervisor.o: Supervisor.cpp Supervisor.h
-	$(CC) $(CFlags) Supervisor.cpp
+	$(CC) $(CFlags) -c  Supervisor.cpp
 
 clean:
 	$(RM) $(TARGET) *.o *~
