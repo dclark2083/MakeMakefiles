@@ -1,0 +1,5 @@
+# .gitignore file created to ignore binary and Emac backup files.
+
+main
+*.o
+*~
