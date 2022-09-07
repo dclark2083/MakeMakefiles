@@ -1,11 +1,12 @@
-/**
- * @file Makefile
- * @author Darren Clark
- * @date 2022-09-06
- * @brief Makefile for toolkit assignment - Make & Makefiles.
- * 
- * Makefile that describes how a program named 'employee' should be compiled then creates an executable for said program based on rules in the Makefile.
- */
+#
+# @file Makefile
+# @author Darren Clark
+# @date 2022-09-06
+# @brief Makefile for toolkit assignment - Make & Makefiles.
+#  
+# Makefile that describes how a program named 'employee' should
+# be compiled then creates an executable for said program based on rules in the Makefile.
+
 
 # basic structure is
 # target: dependencies
