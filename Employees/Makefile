@@ -1,23 +1,16 @@
-#
 # @file Makefile
 # @author Darren Clark
 # @date 2022-09-06
 # @brief Makefile for toolkit assignment - Make & Makefiles.
 #  
 # Makefile that describes how a program named 'employee' should
-# be compiled then creates an executable for said program based on rules in the Makefile.
-
-
-# basic structure is
-# target: dependencies
-# 	action
-# employee: <-- name of the executable main.o employee.o supervisor.o officer.o
-# 	flags -o employee
+# be compiled then creates an executable for said program based
+# on rules in the Makefile.
 
 # Declares default compiler to be used with this makefile.
 CC = g++
 
-# Declares the executable name employee.
+# Declares the executable to be  named employee.
 TARGET = employee
 
 # Declared compiler flags to be used when creating the program.
