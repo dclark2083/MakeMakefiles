@@ -1,6 +1,6 @@
 # @file Makefile
 # @author Darren Clark
-# @date 2022-09-06
+# @date 2022-09-08
 # @brief Makefile for toolkit assignment - Make & Makefiles.
 #  
 # Makefile that describes how a program named 'employee' should
@@ -22,7 +22,7 @@ employee: main.o Employee.o Supervisor.o Officer.o
 	$(CC) $(CFlags) -o $(TARGET) Employee.o Supervisor.o Officer.o main.o
 
 main.o: main.cpp Employee.h Supervisor.h Officer.h
-	$(CC) $(CFlags) -c main.cpp Employee.cpp Supervisor.cpp Officer.cpp
+	$(CC) $(CFlags) -c  main.cpp Employee.cpp Supervisor.cpp Officer.cpp
 
 Employee.o: Employee.cpp Employee.h
 	$(CC) $(CFlags) -c  Employee.cpp
