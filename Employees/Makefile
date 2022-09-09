@@ -1,6 +1,6 @@
 # @file Makefile
 # @author Darren Clark
-# @date 2022-09-08
+# @date 2022-09-09
 # @brief Makefile for toolkit assignment - Make & Makefiles.
 #  
 # Makefile that describes how a program named 'employee' should
@@ -13,9 +13,10 @@ CC = g++
 # Declares the executable to be  named employee.
 TARGET = employee
 
-# Declared compiler flags to be used when creating the program.
+# Declared compiler flags to complie showing all errors and warnings.
 CFLAGS = -c -g -Wall -Wextra
 
+# Default task to be completed when calling make.
 all: $(TARGET)
 
 employee: main.o Employee.o Supervisor.o Officer.o
@@ -35,5 +36,6 @@ Supervisor.o: Supervisor.cpp Supervisor.h
 
 clean:
 	$(RM) $(TARGET) *.o *~
+
 
 
