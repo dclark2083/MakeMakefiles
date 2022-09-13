@@ -19,21 +19,27 @@ CFLAGS = -c -g -Wall -Wextra
 # Default task to be completed when calling make.
 all: $(TARGET)
 
-employee: main.o Employee.o Supervisor.o Officer.o
+# Required executables to create main program.
+$(TARGET): main.o Employee.o Supervisor.o Officer.o
 	$(CC) $(CFlags) -o $(TARGET) Employee.o Supervisor.o Officer.o main.o
 
+# Required files to creat main.o executable.
 main.o: main.cpp Employee.h Supervisor.h Officer.h
 	$(CC) $(CFlags) -c  main.cpp Employee.cpp Supervisor.cpp Officer.cpp
 
+# Required files to create Employee.o executable.
 Employee.o: Employee.cpp Employee.h
 	$(CC) $(CFlags) -c  Employee.cpp
 
+# Required files to create Officer.o executable.
 Officer.o: Officer.cpp Officer.h
 	$(CC) $(CFlags) -c  Officer.cpp
 
+# Required files to create Supervisor.o executable.
 Supervisor.o: Supervisor.cpp Supervisor.h
 	$(CC) $(CFlags) -c  Supervisor.cpp
 
+# Command used to clean any left over executables/Emac temp files.
 clean:
 	$(RM) $(TARGET) *.o *~
 
